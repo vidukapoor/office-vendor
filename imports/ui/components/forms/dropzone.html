@@ -1,0 +1,10 @@
+<template name="formUpload">
+  <div class="container container-lg">
+    <h5 class="text-center">Dropzone<br/><small>DropzoneJS is an open source library that provides drag&apos;n&apos;drop file uploads with image previews.</small><br/><small class="spr">It’s lightweight, doesn’t depend on any other library (like jQuery) and is</small><small><a href="https://github.com/devonbarrett/meteor-dropzone" target="_blank">highly customizable</a></small></h5>
+
+    <!-- More info on dropzone: https://github.com/devonbarrett/meteor-dropzone/ -->
+    {{> dropzone url='http://somewebsite.com/upload' id='dropzoneDiv' class="b0"}}
+
+    <p class="mt"><small>This demo does not upload files to any server.</small></p>
+  </div>
+</template>

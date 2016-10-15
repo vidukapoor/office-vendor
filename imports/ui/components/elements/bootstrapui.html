@@ -1,0 +1,485 @@
+
+<template name="bootstrap">
+  <!-- Breadcrumb next to view title-->
+  <ul class="breadcrumb breadcrumb-lead">
+    <li><a href="dashboard.html">Home</a></li>
+    <li><a href="dashboard.html">Dashboard</a></li>
+    <li class="active"><span>Bootstrap</span></li>
+  </ul>
+  <div class="container-fluid">
+    <!-- START row-->
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="jumbotron">
+          <div class="container">
+            <h1>Bootstrap Jumbotron</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing.</p>
+            <p><a role="button" class="btn btn-primary btn-lg">Learn more</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END row-->
+    <!-- START row-->
+    <div class="row">
+      <div class="col-lg-6">
+        <!-- START panel-->
+        <div class="panel">
+          <div class="panel-heading">Alert Styles</div>
+          <div class="panel-body">
+            <div class="alert alert-success">Lorem ipsum dolor sit amet, consectetur adipisicing elit.<a href="#" class="alert-link">Alert Link</a></div>
+            <div class="alert alert-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit.<a href="#" class="alert-link">Alert Link</a></div>
+            <div class="alert alert-danger">Lorem ipsum dolor sit amet, consectetur adipisicing elit.<a href="#" class="alert-link">Alert Link</a></div>
+            <div class="alert alert-warning">Lorem ipsum dolor sit amet, consectetur adipisicing elit.<a href="#" class="alert-link">Alert Link</a></div>
+          </div>
+        </div>
+        <!-- END panel-->
+        <!-- START panel-->
+        <div class="panel">
+          <div class="panel-heading">Progress Bar</div>
+          <div class="panel-body">
+            <h4>Static</h4>
+            <div class="progress">
+              <div role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;" class="progress-bar">60%</div>
+            </div>
+            <div class="progress">
+              <div role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;" class="progress-bar progress-bar-success">60%</div>
+            </div>
+            <div class="progress">
+              <div role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;" class="progress-bar progress-bar-danger">60%</div>
+            </div>
+            <h4>Striped</h4>
+            <div class="progress">
+              <div role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%" class="progress-bar progress-bar-success progress-bar-striped"><span class="sr-only">40% Complete (success)</span></div>
+            </div>
+            <div class="progress">
+              <div role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%" class="progress-bar progress-bar-info progress-bar-striped"><span class="sr-only">20% Complete</span></div>
+            </div>
+            <div class="progress">
+              <div role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%" class="progress-bar progress-bar-striped active"><span class="sr-only">45% Complete</span></div>
+            </div>
+            <h4>Stacked</h4>
+            <div class="progress">
+              <div style="width: 35%" class="progress-bar progress-bar-success"><span class="sr-only">35% Complete (success)</span></div>
+              <div style="width: 20%" class="progress-bar progress-bar-warning progress-bar-striped"><span class="sr-only">20% Complete (warning)</span></div>
+              <div style="width: 10%" class="progress-bar progress-bar-danger"><span class="sr-only">10% Complete (danger)</span></div>
+            </div>
+          </div>
+        </div>
+        <!-- END panel-->
+        <!-- START panel-->
+        <div class="panel">
+          <div class="panel-heading">Tooltips</div>
+          <div class="panel-body">
+            <div>
+              <div class="form-group">
+                <button type="button" data-toggle="tooltip" data-placement="left" title="Tooltip on left" class="btn btn-default">Tooltip on left</button>
+                <button type="button" data-toggle="tooltip" data-placement="top" title="Tooltip on top" class="btn btn-default">Tooltip on top</button>
+                <button type="button" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom" class="btn btn-default">Tooltip on bottom</button>
+                <button type="button" data-toggle="tooltip" data-placement="right" title="Tooltip on right" class="btn btn-default">Tooltip on right</button>
+              </div>
+              <p>Pellentesque<a href="#" data-toggle="tooltip" title="Some text">eget nunc scelerisque</a>,
+                sit amet venenatis urna cursus eget nunc scelerisque viverra mauris, in
+                aliquam. Tincidunt lobortis feugiat vivamus at<a href="#" data-placement="left" data-toggle="tooltip" title="On the Left!">left</a>eget
+                arcu dictum varius duis at consectetur lorem. Vitae elementum curabitur<a href="#" data-placement="right" data-toggle="tooltip" title="On the Right!">right</a>nunc sed velit dignissim sodales ut eu sem integer vitae. Turpis egestas<a href="#" data-placement="bottom" data-toggle="tooltip" title="On the Bottom!">bottom</a>pharetra convallis posuere morbi leo urna,<a href="#" data-animation="true" data-toggle="tooltip" title="I don't fade. :-(">fading</a>at elementum eu, facilisis sed odio morbi quis commodo odio. In cursus<a href="#" data-delay="1000" data-toggle="tooltip" title="appears with delay">delayed</a>turpis massa tincidunt dui ut.
+              </p>
+              <p>I can even contain HTML.<a href="#" data-toggle="tooltip" data-html="true" title="&lt;b&gt;Check me bold&lt;/b&gt;">Check me out!</a></p>
+              <form role="form">
+                <div class="form-group">
+                  <label>Or use custom triggers, like focus:</label>
+                  <input type="text" value="Click me!" data-toggle="tooltip" data-title="See? Now click away..." data-trigger="focus" data-placement="top" class="form-control"/>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- END panel-->
+      </div>
+      <div class="col-lg-6">
+        <!-- START panel-->
+        <div class="panel">
+          <div class="panel-heading">Modals</div>
+          <div class="panel-body">
+            <!-- Button trigger modal-->
+            <button type="button" data-toggle="modal" data-target=".bs-example-modal-lg" class="btn btn-primary">Large modal</button>
+            <button type="button" data-toggle="modal" data-target=".bs-example-modal-sm" class="btn btn-primary">Small modal</button>
+            <!-- Modal content for the above example-->
+            <div tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" class="modal fade bs-example-modal-lg">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button>
+                    <h4 id="myLargeModalLabel" class="modal-title">Large modal</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>Mauris eu lacus massa, vel condimentum lectus.</p>
+                  </div>
+                </div>
+                <!-- /.modal-content-->
+              </div>
+              <!-- /.modal-dialog-->
+            </div>
+            <!-- /.modal-->
+            <div tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" class="modal fade bs-example-modal-sm">
+              <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button>
+                    <h4 id="mySmallModalLabel" class="modal-title">Small modal</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>Vestibulum molestie commodo elit ut feugiat.</p>
+                  </div>
+                </div>
+                <!-- /.modal-content-->
+              </div>
+              <!-- /.modal-dialog-->
+            </div>
+            <!-- /.modal-->
+          </div>
+        </div>
+        <!-- END panel-->
+        <!-- START panel-->
+        <div class="panel">
+          <div class="panel-heading">Popovers</div>
+          <div class="panel-body">
+            <h4>Live demo</h4>
+            <button type="button" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?" class="btn btn-lg btn-danger">Click to toggle popover</button>
+            <h4>Positional</h4>
+            <button type="button" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." class="btn btn-default">Popover on left</button>
+            <button type="button" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." class="btn btn-default">Popover on top</button>
+            <button type="button" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus                        sagittis lacus vel augue laoreet rutrum faucibus." class="btn btn-default">Popover on bottom</button>
+            <button type="button" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." class="btn btn-default">Popover on right</button>
+            <h4>Dismiss on next click</h4><a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?" class="btn btn-lg btn-danger">Dismissible popover</a>
+          </div>
+        </div>
+        <!-- END panel-->
+        <!-- END row-->
+        <div class="panel">
+          <div class="panel-heading">Carousel</div>
+          <div class="panel-body">
+            <div id="carousel-example-generic" data-ride="carousel" class="carousel slide">
+              <!-- Indicators-->
+              <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+              </ol>
+              <!-- Wrapper for slides-->
+              <div role="listbox" class="carousel-inner">
+                <div class="item active"><img src="img/pic1.jpg" alt="Carousel" class="fw"/>
+                  <div class="carousel-caption">Aliquam interdum, erat et accumsan iaculis, sapien ipsum aliquam tellus, eget posuere arcu ligula ac risus.</div>
+                </div>
+                <div class="item"><img src="img/pic2.jpg" alt="Carousel" class="fw"/>
+                  <div class="carousel-caption">Suspendisse aliquam dignissim dictum.</div>
+                </div>
+                <div class="item"><img src="img/pic3.jpg" alt="Carousel" class="fw"/>
+                  <div class="carousel-caption">Suspendisse aliquam dignissim dictum.</div>
+                </div>
+              </div>
+              <!-- Controls--><a href="#carousel-example-generic" role="button" data-slide="prev" class="left carousel-control"><span aria-hidden="true" class="icon-prev ion-chevron-left"></span><span class="sr-only">Previous</span></a><a href="#carousel-example-generic" role="button" data-slide="next" class="right carousel-control"><span aria-hidden="true" class="icon-next ion-chevron-right"></span><span class="sr-only">Next</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="panel-heading">List groups</div>
+          <div class="panel-body">
+            <div class="list-group"><a href="#" class="list-group-item active"><span class="badge">25</span> Active list item group #100</a><a href="#" class="list-group-item">List item group #120</a><a href="#" class="list-group-item disabled">Disabled list item group #300</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h4 class="page-header">Panel Styles</h4>
+    <!-- START row-->
+    <div class="row">
+      <div class="col-lg-4">
+        <!-- START panel-->
+        <div id="panelDemo7" class="panel panel-default">
+          <div class="panel-heading">
+            <div class="panel-title">Default Panel</div>
+          </div>
+          <div class="panel-body">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
+          </div>
+          <div class="panel-footer">Panel Footer</div>
+        </div>
+        <!-- END panel-->
+      </div>
+      <div class="col-lg-4">
+        <!-- START panel-->
+        <div id="panelDemo8" class="panel panel-primary">
+          <div class="panel-heading">
+            <div class="panel-title">Primary Panel</div>
+          </div>
+          <div class="panel-body">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
+          </div>
+          <div class="panel-footer">Panel Footer</div>
+        </div>
+        <!-- END panel-->
+      </div>
+      <div class="col-lg-4">
+        <!-- START panel-->
+        <div id="panelDemo9" class="panel panel-success">
+          <div class="panel-heading">
+            <div class="panel-title">Success Panel</div>
+          </div>
+          <div class="panel-body">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
+          </div>
+          <div class="panel-footer">Panel Footer</div>
+        </div>
+        <!-- END panel-->
+      </div>
+    </div>
+    <!-- END row-->
+    <!-- START row-->
+    <div class="row">
+      <div class="col-lg-4">
+        <!-- START panel-->
+        <div id="panelDemo10" class="panel panel-info">
+          <div class="panel-heading">
+            <div class="panel-title">Info Panel</div>
+          </div>
+          <div class="panel-body">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
+          </div>
+          <div class="panel-footer">Panel Footer</div>
+        </div>
+        <!-- END panel-->
+      </div>
+      <div class="col-lg-4">
+        <!-- START panel-->
+        <div id="panelDemo11" class="panel panel-warning">
+          <div class="panel-heading">
+            <div class="panel-title">Warning Panel</div>
+          </div>
+          <div class="panel-body">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
+          </div>
+          <div class="panel-footer">Panel Footer</div>
+        </div>
+        <!-- END panel-->
+      </div>
+      <div class="col-lg-4">
+        <!-- START panel-->
+        <div id="panelDemo12" class="panel panel-danger">
+          <div class="panel-heading">
+            <div class="panel-title">Danger Panel</div>
+          </div>
+          <div class="panel-body">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
+          </div>
+          <div class="panel-footer">Panel Footer</div>
+        </div>
+        <!-- END panel-->
+      </div>
+    </div>
+    <!-- END row-->
+    <!-- START row-->
+    <div class="row">
+      <div class="col-lg-12">
+        <!-- START panel-->
+        <div id="panelDemo13" class="panel">
+          <div class="panel-heading">Collapsible Accordion Panel Group</div>
+          <div class="panel-body">
+            <div id="accordion" role="tablist" aria-multiselectable="true" class="panel-group">
+              <div class="panel panel-default">
+                <div id="headingOne" role="tab" class="panel-heading">
+                  <h4 class="panel-title"><a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Collapsible Group Item #1</a></h4>
+                </div>
+                <div id="collapseOne" role="tabpanel" aria-labelledby="headingOne" class="panel-collapse collapse in">
+                  <div class="panel-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven&apos;t heard of them accusamus labore sustainable VHS.</div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div id="headingTwo" role="tab" class="panel-heading">
+                  <h4 class="panel-title"><a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" class="collapsed">Collapsible Group Item #2</a></h4>
+                </div>
+                <div id="collapseTwo" role="tabpanel" aria-labelledby="headingTwo" class="panel-collapse collapse">
+                  <div class="panel-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven&apos;t heard of them accusamus labore sustainable VHS.</div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div id="headingThree" role="tab" class="panel-heading">
+                  <h4 class="panel-title"><a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree" class="collapsed">Collapsible Group Item #3</a></h4>
+                </div>
+                <div id="collapseThree" role="tabpanel" aria-labelledby="headingThree" class="panel-collapse collapse">
+                  <div class="panel-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven&apos;t heard of them accusamus labore sustainable VHS.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- END panel-->
+      </div>
+    </div>
+    <!-- END row-->
+    <!-- START row-->
+    <div class="row">
+      <div class="col-lg-6">
+        <!-- START panel-->
+        <div id="panelDemo14" class="panel">
+          <div class="panel-heading">Basic Tabs</div>
+          <div class="panel-body">
+            <div>
+              <!-- Nav tabs-->
+              <ul role="tablist" class="nav nav-tabs">
+                <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+                <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+                <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+                <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+              </ul>
+              <!-- Tab panes-->
+              <div class="tab-content">
+                <div id="home" role="tabpanel" class="tab-pane active">Maecenas elementum, justo in pulvinar bibendum, tellus nulla adipiscing libero, at rutrum velit sapien vel velit. Phasellus hendrerit ullamcorper est eget tincidunt. Aenean non neque a tortor tempor consequat a ut ligula. Mauris eros nibh, adipiscing ac commodo vel, molestie mattis magna. Curabitur adipiscing, tellus ut congue tempus, dui lacus cursus risus, nec pellentesque mi purus eget augue. Fusce ullamcorper placerat tortor, placerat consequat diam cursus posuere.</div>
+                <div id="profile" role="tabpanel" class="tab-pane">Nullam eu lacus in nibh rutrum ornare at eget tellus. Nullam rutrum convallis lacus non mattis. Praesent dapibus justo dolor. Duis convallis placerat egestas. Aenean non neque a tortor tempor consequat a ut ligula. Mauris eros nibh, adipiscing ac commodo vel, molestie mattis magna. Curabitur adipiscing, tellus ut congue tempus, dui lacus cursus risus, nec pellentesque mi purus eget augue. Fusce ullamcorper placerat tortor, placerat consequat diam cursus posuere.</div>
+                <div id="messages" role="tabpanel" class="tab-pane">Aenean non neque a tortor tempor consequat a ut ligula. Mauris eros nibh, adipiscing ac commodo vel, molestie mattis magna. Curabitur adipiscing, tellus ut congue tempus, dui lacus cursus risus, nec pellentesque mi purus eget augue. Fusce ullamcorper placerat tortor, placerat consequat diam cursus posuere. Aenean non neque a tortor tempor consequat a ut ligula. Mauris eros nibh, adipiscing ac commodo vel, molestie mattis magna. Curabitur adipiscing, tellus ut congue tempus, dui lacus cursus risus, nec pellentesque mi purus eget augue. Fusce ullamcorper placerat tortor, placerat consequat diam cursus posuere.</div>
+                <div id="settings" role="tabpanel" class="tab-pane">Sed id lacus enim, sit amet imperdiet orci. Phasellus sed dui massa, vitae dapibus augue. Nam vehicula rhoncus nisl, et ullamcorper augue ullamcorper semper. Aenean non neque a tortor tempor consequat a ut ligula. Mauris eros nibh, adipiscing ac commodo vel, molestie mattis magna. Curabitur adipiscing, tellus ut congue tempus, dui lacus cursus risus, nec pellentesque mi purus eget augue. Fusce ullamcorper placerat tortor, placerat consequat diam cursus posuere.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- END panel-->
+      </div>
+      <div class="col-lg-6">
+        <!-- START panel-->
+        <div id="panelDemo15" class="panel">
+          <div class="panel-heading">Pill Tabs</div>
+          <div class="panel-body">
+            <div>
+              <!-- Nav tabs-->
+              <ul role="tablist" class="nav nav-pills">
+                <li role="presentation" class="active"><a href="#home1" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+                <li role="presentation"><a href="#profile1" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+                <li role="presentation"><a href="#messages1" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+                <li role="presentation"><a href="#settings1" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+              </ul>
+              <!-- Tab panes-->
+              <div class="tab-content">
+                <div id="home1" role="tabpanel" class="tab-pane active">Maecenas elementum, justo in pulvinar bibendum, tellus nulla adipiscing libero, at rutrum velit sapien vel velit. Phasellus hendrerit ullamcorper est eget tincidunt. Aenean non neque a tortor tempor consequat a ut ligula. Mauris eros nibh, adipiscing ac commodo vel, molestie mattis magna. Curabitur adipiscing, tellus ut congue tempus, dui lacus cursus risus, nec pellentesque mi purus eget augue. Fusce ullamcorper placerat tortor, placerat consequat diam cursus posuere.</div>
+                <div id="profile1" role="tabpanel" class="tab-pane">Nullam eu lacus in nibh rutrum ornare at eget tellus. Nullam rutrum convallis lacus non mattis. Praesent dapibus justo dolor. Duis convallis placerat egestas. Aenean non neque a tortor tempor consequat a ut ligula. Mauris eros nibh, adipiscing ac commodo vel, molestie mattis magna. Curabitur adipiscing, tellus ut congue tempus, dui lacus cursus risus, nec pellentesque mi purus eget augue. Fusce ullamcorper placerat tortor, placerat consequat diam cursus posuere.</div>
+                <div id="messages1" role="tabpanel" class="tab-pane">Aenean non neque a tortor tempor consequat a ut ligula. Mauris eros nibh, adipiscing ac commodo vel, molestie mattis magna. Curabitur adipiscing, tellus ut congue tempus, dui lacus cursus risus, nec pellentesque mi purus eget augue. Fusce ullamcorper placerat tortor, placerat consequat diam cursus posuere. Aenean non neque a tortor tempor consequat a ut ligula. Mauris eros nibh, adipiscing ac commodo vel, molestie mattis magna. Curabitur adipiscing, tellus ut congue tempus, dui lacus cursus risus, nec pellentesque mi purus eget augue. Fusce ullamcorper placerat tortor, placerat consequat diam cursus posuere.</div>
+                <div id="settings1" role="tabpanel" class="tab-pane">Sed id lacus enim, sit amet imperdiet orci. Phasellus sed dui massa, vitae dapibus augue. Nam vehicula rhoncus nisl, et ullamcorper augue ullamcorper semper. Aenean non neque a tortor tempor consequat a ut ligula. Mauris eros nibh, adipiscing ac commodo vel, molestie mattis magna. Curabitur adipiscing, tellus ut congue tempus, dui lacus cursus risus, nec pellentesque mi purus eget augue. Fusce ullamcorper placerat tortor, placerat consequat diam cursus posuere.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- END panel-->
+      </div>
+    </div>
+    <!-- END row-->
+    <!-- START row-->
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="well well-lg">
+          <h4 class="mt0">Large Well</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="well">
+          <h4 class="mt0">Normal Well</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="well well-sm">
+          <h4 class="mt0">Small Well</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
+        </div>
+      </div>
+    </div>
+    <!-- END row-->
+    <!-- START panel-->
+    <div class="panel">
+      <div class="panel-heading">
+        <h3 class="panel-title">Pagination</h3>
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-lg-6">
+            <nav>
+              <ul class="pagination">
+                <li><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li class="disabled"><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-lg-6">
+            <nav>
+              <ul class="pagination pagination-lg">
+                <li><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li class="active"><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <h5>Rounded buttons</h5>
+        <div class="row">
+          <div class="col-lg-6">
+            <nav>
+              <ul class="pagination pagination-rounded">
+                <li><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li class="disabled"><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-lg-6">
+            <nav>
+              <ul class="pagination pagination-lg pagination-rounded">
+                <li><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li class="active"><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <h5>Pager</h5>
+        <div class="row">
+          <div class="col-lg-4 col-lg-offset-4">
+            <nav>
+              <ul class="pager">
+                <li><a href="#">Previous</a></li>
+                <li><a href="#">Next</a></li>
+              </ul>
+            </nav>
+            <nav>
+              <ul class="pager">
+                <li class="previous"><a href="#"><span aria-hidden="true">&larr;</span> Older</a></li>
+                <li class="next"><a href="#">Newer<span aria-hidden="true">&rarr;</span></a></li>
+              </ul>
+            </nav>
+            <nav>
+              <ul class="pager">
+                <li class="previous disabled"><a href="#"><span aria-hidden="true"><em class="ion-arrow-left-a"></em></span></a></li>
+                <li class="next"><a href="#"><em class="em ion-arrow-right-a"></em><span aria-hidden="true"></span></a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <!-- END row-->
+      </div>
+    </div>
+    <!-- END panel-->
+  </div>
+</template>

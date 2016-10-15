@@ -1,0 +1,214 @@
+<template name="sidebar">
+    <div class="sidebar-header">
+        <div class="pull-right pt-lg text-muted hidden"><em class="ion-close-round"></em></div><a href="#" class="sidebar-header-logo"><img src="img/logo.png" data-svg-replace="img/logo.svg" alt="Logo"><span class="sidebar-header-logo-text">Centric</span></a>
+    </div>
+    <div class="sidebar-content">
+        <div class="sidebar-toolbar text-center"><a href=""><img src="img/user/01.jpg" alt="Profile" class="img-circle thumb64"></a>
+            <div class="mt">Welcome, Willie Webb</div>
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <li class="{{isActiveRoute regex='dashboard'}}">
+                    <a href="{{pathFor 'dashboard'}}" class="ripple"><span class="pull-right nav-label"><span class="badge bg-success">2</span></span><span class="nav-icon"><img src="" data-svg-replace="img/icons/aperture.svg" alt="MenuItem" class="hidden"></span><span>Dashboard</span></a></li>
+                <li class="{{isActiveRoute regex='cards'}}">
+                    <a href="{{pathFor 'cards'}}" class="ripple"><span class="pull-right nav-label"></span><span class="nav-icon"><img src="" data-svg-replace="img/icons/radio-waves.svg" alt="MenuItem" class="hidden"></span><span>Cards</span></a></li>
+                <li class="{{isActiveRoute regex='chart-flot|chart-radial|chart-rickshaw'}}">
+                    <a href="#" class="ripple"><span class="pull-right nav-caret"><em class="ion-ios-arrow-right"></em></span><span class="pull-right nav-label"></span><span class="nav-icon"><img src="" data-svg-replace="img/icons/connection-bars.svg" alt="MenuItem" class="hidden"></span><span>Charts</span></a>
+                    <ul class="sidebar-subnav">
+                        <li class="{{isActiveRoute regex='chart-flot'}}">
+                            <a href="{{pathFor 'chart-flot'}}" class="ripple"><span class="pull-right nav-label"></span><span>Flot</span></a>
+                        </li>
+                        <li class="{{isActiveRoute regex='chart-radial'}}">
+                            <a href="{{pathFor 'chart-radial'}}" class="ripple"><span class="pull-right nav-label"></span><span>Radial</span></a>
+                        </li>
+                        <li class="{{isActiveRoute regex='chart-rickshaw'}}">
+                            <a href="{{pathFor 'chart-rickshaw'}}" class="ripple"><span class="pull-right nav-label"></span><span>Rickshaw</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="{{isActiveRoute regex='form-classic|form-advanced|form-validation|form-material|form-editor|form-upload|form-xeditable|form-wizard'}}">
+                    <a href="#" class="ripple"><span class="pull-right nav-caret"><em class="ion-ios-arrow-right"></em></span><span class="pull-right nav-label"></span><span class="nav-icon"><img src="" data-svg-replace="img/icons/clipboard.svg" alt="MenuItem" class="hidden"></span><span>Forms</span></a>
+                    <ul class="sidebar-subnav">
+                        <li class="{{isActiveRoute regex='form-classic'}}">
+                            <a href="{{pathFor 'form-classic'}}" class="ripple"><span class="pull-right nav-label"></span><span>Classic</span></a>
+                        </li>
+                        <li class="{{isActiveRoute regex='form-validation'}}">
+                            <a href="{{pathFor 'form-validation'}}" class="ripple"><span class="pull-right nav-label"></span><span>Validation</span></a>
+                        </li>
+                        <li class="{{isActiveRoute regex='form-advanced'}}">
+                            <a href="{{pathFor 'form-advanced'}}" class="ripple"><span class="pull-right nav-label"></span><span>Advanced</span></a>
+                        </li>
+                        <li class="{{isActiveRoute regex='form-material'}}">
+                            <a href="{{pathFor 'form-material'}}" class="ripple"><span class="pull-right nav-label"></span><span>Material</span></a>
+                        </li>
+                        <li class="{{isActiveRoute regex='form-editor'}}">
+                            <a href="{{pathFor 'form-editor'}}" class="ripple"><span class="pull-right nav-label"></span><span>Editors</span></a>
+                        </li>
+                        <li class="{{isActiveRoute regex='form-upload'}}">
+                            <a href="{{pathFor 'form-upload'}}" class="ripple"><span class="pull-right nav-label"></span><span>Dropzone</span></a>
+                        </li>
+                        <li class="{{isActiveRoute regex='form-xeditable'}}">
+                            <a href="{{pathFor 'form-xeditable'}}" class="ripple"><span class="pull-right nav-label"></span><span>xEditable</span></a>
+                        </li>
+                        <li class="{{isActiveRoute regex='form-wizard'}}">
+                            <a href="{{pathFor 'form-wizard'}}" class="ripple"><span class="pull-right nav-label"></span><span>Wizard</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="{{isActiveRoute regex='table-classic|table-datatables|table-bootgrid'}}">
+                    <a href="#" class="ripple"><span class="pull-right nav-caret"><em class="ion-ios-arrow-right"></em></span><span class="pull-right nav-label"></span><span class="nav-icon"><img src="" data-svg-replace="img/icons/navicon.svg" alt="MenuItem" class="hidden"></span><span>Tables</span></a>
+                    <ul id="tables" class="sidebar-subnav">
+                        <li>
+                            <a href="{{pathFor 'table-classic'}}" class="ripple"><span class="pull-right nav-label"></span><span>Classic</span></a>
+                        </li>
+                        <li>
+                            <a href="{{pathFor 'table-datatables'}}" class="ripple"><span class="pull-right nav-label"></span><span>Datatable</span></a>
+                        </li>
+                        <li>
+                            <a href="{{pathFor 'table-bootgrid'}}" class="ripple"><span class="pull-right nav-label"></span><span>Bootgrid</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="{{isActiveRoute regex='layout-columns|layout-overlap|layout-boxed|layout-tabs|layout-containers'}}">
+                    <a href="#" class="ripple"><span class="pull-right nav-caret"><em class="ion-ios-arrow-right"></em></span><span class="pull-right nav-label"></span><span class="nav-icon"><img src="" data-svg-replace="img/icons/grid.svg" alt="MenuItem" class="hidden"></span><span>Layouts</span></a>
+                    <ul id="layouts" class="sidebar-subnav">
+                        <li class="{{isActiveRoute regex='layout-columns'}}">
+                            <a href="{{pathFor 'layout-columns'}}" class="ripple"><span class="pull-right nav-label"></span><span>Columns</span></a>
+                        </li>
+                        <li class="{{isActiveRoute regex='layout-overlap'}}">
+                            <a href="{{pathFor 'layout-overlap'}}" class="ripple"><span class="pull-right nav-label"></span><span>Overlap</span></a>
+                        </li>
+                        <li class="{{isActiveRoute regex='layout-boxed'}}">
+                            <a href="{{pathFor 'layout-boxed'}}" class="ripple"><span class="pull-right nav-label"></span><span>Boxed</span></a>
+                        </li>
+                        <li class="{{isActiveRoute regex='layout-tabs'}}">
+                            <a href="{{pathFor 'layout-tabs'}}" class="ripple"><span class="pull-right nav-label"></span><span>Tabs</span></a>
+                        </li>
+                        <li class="{{isActiveRoute regex='layout-containers'}}">
+                            <a href="{{pathFor 'layout-containers'}}" class="ripple"><span class="pull-right nav-label"></span><span>Containers</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="{{isActiveRoute regex='colors|whiteframes|lists|bootstrap|buttons|sweetalert|spinners|nestable|grid|grid-masonry|typography|icons|utilities'}}">
+                    <a href="#" class="ripple"><span class="pull-right nav-caret"><em class="ion-ios-arrow-right"></em></span><span class="pull-right nav-label"></span><span class="nav-icon"><img src="" data-svg-replace="img/icons/levels.svg" alt="MenuItem" class="hidden"></span><span>Elements</span></a>
+                    <ul id="elements" class="sidebar-subnav">
+                        <li class="{{isActiveRoute regex='colors'}}">
+                            <a href="{{pathFor 'colors'}}" class="ripple"><span class="pull-right nav-label"></span><span>Colors</span></a>
+                        </li>
+                        <li class="{{isActiveRoute regex='whiteframes'}}">
+                            <a href="{{pathFor 'whiteframes'}}" class="ripple"><span class="pull-right nav-label"></span><span>Whiteframes</span></a>
+                        </li>
+                        <li class="{{isActiveRoute regex='lists'}}">
+                            <a href="{{pathFor 'lists'}}" class="ripple"><span class="pull-right nav-label"></span><span>Lists</span></a>
+                        </li>
+                        <li class="{{isActiveRoute regex='bootstrap'}}">
+                            <a href="{{pathFor 'bootstrap'}}" class="ripple"><span class="pull-right nav-label"></span><span>Bootstrap</span></a>
+                        </li>
+                        <li class="{{isActiveRoute regex='buttons'}}">
+                            <a href="{{pathFor 'buttons'}}" class="ripple"><span class="pull-right nav-label"></span><span>Buttons</span></a>
+                        </li>
+                        <li class="{{isActiveRoute regex='sweetalert'}}">
+                            <a href="{{pathFor 'sweetalert'}}"><span class="pull-right nav-label"></span><span>Sweet-alert</span></a>
+                        </li>
+                        <li class="{{isActiveRoute regex='spinners'}}">
+                            <a href="{{pathFor 'spinners'}}" class="ripple"><span class="pull-right nav-label"></span><span>Spinners</span></a>
+                        </li>
+                        <li class="{{isActiveRoute regex='nestable'}}">
+                            <a href="{{pathFor 'nestable'}}" class="ripple"><span class="pull-right nav-label"></span><span>Nestable</span></a>
+                        </li>
+                        <li class="{{isActiveRoute regex='grid'}}">
+                            <a href="{{pathFor 'grid'}}" class="ripple"><span class="pull-right nav-label"></span><span>Grid</span></a>
+                        </li>
+                        <li class="{{isActiveRoute regex='grid-masonry'}}">
+                            <a href="{{pathFor 'grid-masonry'}}" class="ripple"><span class="pull-right nav-label"></span><span>Grid Masonry</span></a>
+                        </li>
+                        <li class="{{isActiveRoute regex='typography'}}">
+                            <a href="{{pathFor 'typography'}}" class="ripple"><span class="pull-right nav-label"></span><span>Typography</span></a>
+                        </li>
+                        <li class="{{isActiveRoute regex='icons'}}">
+                            <a href="{{pathFor 'icons'}}" class="ripple"><span class="pull-right nav-label"></span><span>Icons</span></a>
+                        </li>
+                        <li class="{{isActiveRoute regex='utilities'}}">
+                            <a href="{{pathFor 'utilities'}}" class="ripple"><span class="pull-right nav-label"></span><span>Utilities</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="{{isActiveRoute regex='google-map-full|google-map|vector-map'}}">
+                    <a href="#" class="ripple"><span class="pull-right nav-caret"><em class="ion-ios-arrow-right"></em></span><span class="pull-right nav-label"></span><span class="nav-icon"><img src="" data-svg-replace="img/icons/planet.svg" alt="MenuItem" class="hidden"></span><span>Maps</span></a>
+                    <ul id="maps" class="sidebar-subnav">
+                        <li class="{{isActiveRoute regex='google-map-full'}}">
+                            <a href="{{pathFor 'google-map-full'}}" class="ripple"><span class="pull-right nav-label"></span><span>Google Maps Full</span></a>
+                        </li>
+                        <li class="{{isActiveRoute regex='google-map'}}">
+                            <a href="{{pathFor 'google-map'}}" class="ripple"><span class="pull-right nav-label"></span><span>Google Maps</span></a>
+                        </li>
+                        <li class="{{isActiveRoute regex='vector-map'}}">
+                            <a href="{{pathFor 'vector-map'}}" class="ripple"><span class="pull-right nav-label"></span><span>Vector Maps</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="{{isActiveRoute regex='profile|gallery|wall|search|messages-board|blog|blog-article'}}">
+                    <a href="#" class="ripple"><span class="pull-right nav-caret"><em class="ion-ios-arrow-right"></em></span><span class="pull-right nav-label"></span><span class="nav-icon"><img src="" data-svg-replace="img/icons/ios-browsers.svg" alt="MenuItem" class="hidden"></span><span>Pages</span></a>
+                    <ul id="pages" class="sidebar-subnav">
+                        <li class="{{isActiveRoute regex='timeline'}}">
+                            <a href="{{pathFor 'timeline'}}" class="ripple"><span class="pull-right nav-label"></span><span>Timeline</span></a>
+                        </li>
+                        <li class="{{isActiveRoute regex='invoice'}}">
+                            <a href="{{pathFor 'invoice'}}" class="ripple"><span class="pull-right nav-label"></span><span>Invoice</span></a>
+                        </li>
+                        <li class="{{isActiveRoute regex='pricing'}}">
+                            <a href="{{pathFor 'pricing'}}" class="ripple"><span class="pull-right nav-label"></span><span>Pricing</span></a>
+                        </li>
+                        <li class="{{isActiveRoute regex='contacts'}}">
+                            <a href="{{pathFor 'contacts'}}" class="ripple"><span class="pull-right nav-label"></span><span>Contacts</span></a>
+                        </li>
+                        <li class="{{isActiveRoute regex='faq'}}">
+                            <a href="{{pathFor 'faq'}}" class="ripple"><span class="pull-right nav-label"></span><span>FAQ</span></a>
+                        </li>
+                        <li class="{{isActiveRoute regex='projects'}}">
+                            <a href="{{pathFor 'projects'}}" class="ripple"><span class="pull-right nav-label"></span><span>Projects</span></a>
+                        </li>
+                        <li class="{{isActiveRoute regex='blog'}}">
+                            <a href="{{pathFor 'blog'}}" class="ripple"><span class="pull-right nav-label"></span><span>Blog</span></a>
+                        </li>
+                        <li class="{{isActiveRoute regex='blog-article'}}">
+                            <a href="{{pathFor 'blog-article'}}" class="ripple"><span class="pull-right nav-label"></span><span>Article</span></a>
+                        </li>
+                        <li class="{{isActiveRoute regex='profile'}}">
+                            <a href="{{pathFor 'profile'}}" class="ripple"><span class="pull-right nav-label"></span><span>Profile</span></a>
+                        </li>
+                        <li class="{{isActiveRoute regex='gallery'}}">
+                            <a href="{{pathFor 'gallery'}}" class="ripple"><span class="pull-right nav-label"></span><span>Gallery</span></a>
+                        </li>
+                        <li class="{{isActiveRoute regex='wall'}}">
+                            <a href="{{pathFor 'wall'}}" class="ripple"><span class="pull-right nav-label"></span><span>Wall</span></a>
+                        </li>
+                        <li class="{{isActiveRoute regex='search'}}">
+                            <a href="{{pathFor 'search'}}" class="ripple"><span class="pull-right nav-label"></span><span>Search</span></a>
+                        </li>
+                        <li class="{{isActiveRoute regex='messages-board'}}">
+                            <a href="{{pathFor 'messages-board'}}" class="ripple"><span class="pull-right nav-label"></span><span>Messages Board</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="ripple"><span class="pull-right nav-caret"><em class="ion-ios-arrow-right"></em></span><span class="pull-right nav-label"></span><span class="nav-icon"><img src="" data-svg-replace="img/icons/person-stalker.svg" alt="MenuItem" class="hidden"></span><span>User</span></a>
+                    <ul id="user" class="sidebar-subnav">
+                        <li>
+                            <a href="{{pathFor 'login'}}" class="ripple"><span class="pull-right nav-label"></span><span>Login</span></a>
+                        </li>
+                        <li>
+                            <a href="{{pathFor 'signup'}}" class="ripple"><span class="pull-right nav-label"></span><span>Signup</span></a>
+                        </li>
+                        <li>
+                            <a href="{{pathFor 'lock'}}" class="ripple"><span class="pull-right nav-label"></span><span>Lock</span></a>
+                        </li>
+                        <li>
+                            <a href="{{pathFor 'recover'}}" class="ripple"><span class="pull-right nav-label"></span><span>Recover</span></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</template>

@@ -1,0 +1,16 @@
+{
+  "name": "centric",
+  "private": true,
+  "scripts": {
+    "start": "meteor run"
+  },
+  "dependencies": {
+    "d3": "^3.5.17",
+    "ev-emitter": "^1.0.3",
+    "get-size": "^2.0.2",
+    "jquery": "^2.2.4",
+    "masonry-layout": "^4.1.1",
+    "meteor-node-stubs": "~0.2.0",
+    "outlayer": "^2.1.0"
+  }
+}

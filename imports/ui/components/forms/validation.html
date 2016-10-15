@@ -1,0 +1,231 @@
+
+<template name="formsValidation">
+  <div class="container-fluid">
+    <h5 class="mt0">jQuery Form validation</h5>
+    <p class="mb-lg">This jQuery plugin makes simple clientside form validation easy, whilst still offering plenty of customization options. It makes a good choice if you’re building something new from scratch, but also when you’re trying to integrate something into an existing application with lots of existing markup.</p>
+    <!-- START row-->
+    <form id="form-register" name="registerForm" novalidate="" class="form-validate">
+      <!-- START panel-->
+      <div class="card card-default">
+        <div class="card-heading"><small class="pull-right">* Required fields</small>
+          <div class="panel-title">Form Register</div>
+        </div>
+        <div class="card-body">
+          <div class="mda-form-group">
+            <div class="mda-form-control">
+              <input type="email" placeholder="mail@example.com" name="email" required="" class="form-control"/>
+              <div class="mda-form-control-line"></div>
+              <label class="control-label">Email Address *</label>
+            </div>
+          </div>
+          <div class="mda-form-group">
+            <div class="mda-form-control">
+              <input id="id-password" type="password" name="password1" required="" class="form-control"/>
+              <div class="mda-form-control-line"></div>
+              <label class="control-label">Password *</label>
+            </div>
+          </div>
+          <div class="mda-form-group">
+            <div class="mda-form-control">
+              <input type="password" name="confirm_match" required="" class="form-control"/>
+              <div class="mda-form-control-line"></div>
+              <label class="control-label">Confirm Password *</label>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="clearfix">
+            <div class="pull-left">
+              <div class="checkbox c-checkbox">
+                <label>
+                  <input type="checkbox" name="agreements" required=""/><span class="ion-checkmark-round"></span>I agree with the<a href="#"> terms</a>
+                </label>
+              </div>
+            </div>
+            <div class="pull-right mt-sm">
+              <button type="submit" class="btn btn-primary btn-flat">Register</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END panel-->
+    </form>
+    <form id="form-subscribe" name="subscribeForm" novalidate="" class="form-validate">
+      <!-- START panel-->
+      <div class="card card-default">
+        <div class="card-body">
+          <div class="form-group">
+            <div class="mda-input-group input-group">
+              <div class="mda-form-control">
+                <input type="email" placeholder="mail@example.com" name="feedemail" required="" class="form-control"/>
+                <div class="mda-form-control-line"></div>
+                <label class="control-label">Subscribe</label>
+              </div><span class="mda-input-group-addon"><em class="ion-email icon-lg"></em></span><span class="input-group-btn">
+                <button type="submit" class="btn btn-default btn-circle">Go!</button></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <div class="card">
+      <div class="card-body">
+        <!-- START row-->
+        <div class="row">
+          <div class="col-md-12">
+            <form id="form-example" name="form.formValidate" novalidate="" class="form-validate form-horizontal">
+              <fieldset class="b0">
+                <legend>Basics</legend>
+              </fieldset>
+              <fieldset>
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Required Text</label>
+                  <div class="col-sm-6">
+                    <input type="text" name="sometext" required="" class="form-control"/>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset>
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Email</label>
+                  <div class="col-sm-6">
+                    <input type="email" placeholder="mail@example.com" name="email" required="" class="form-control"/>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset>
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Checkbox &amp; Radio</label>
+                  <div class="col-sm-6">
+                    <div class="checkbox c-checkbox">
+                      <label>
+                        <input type="checkbox" required="" name="checkbox"/><span class="ion-checkmark-round"></span> Option one
+                      </label>
+                    </div>
+                    <div class="radio c-radio c-radio-nofont">
+                      <label>
+                        <input type="radio" required="" name="radio" value="option1"/><span class="ion-record"></span> Option one
+                      </label>
+                    </div>
+                    <div class="radio c-radio c-radio-nofont">
+                      <label>
+                        <input type="radio" required="" name="radio" value="option2"/><span class="ion-record"></span> Option two checked
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset>
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Select</label>
+                  <div class="col-sm-6">
+                    <select name="select" required="" class="form-control">
+                      <option value="">Nothing</option>
+                      <option value="1">Option 1</option>
+                      <option value="2">Option 2</option>
+                      <option value="3">Option 3</option>
+                      <option value="4">Option 4</option>
+                    </select>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset>
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Number</label>
+                  <div class="col-sm-6">
+                    <input type="number" name="anumber" required="" class="form-control"/>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset>
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Digits</label>
+                  <div class="col-sm-6">
+                    <input type="text" name="digits" class="form-control"/>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset class="bb0">
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Url</label>
+                  <div class="col-sm-6">
+                    <input type="url" name="url" placeholder="protocol://" class="form-control"/>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset class="b0">
+                <legend>Lengths</legend>
+              </fieldset>
+              <fieldset>
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Min</label>
+                  <div class="col-sm-6">
+                    <input type="text" name="min" class="form-control"/>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset>
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Max</label>
+                  <div class="col-sm-6">
+                    <input type="text" name="max" class="form-control"/>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset>
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Minlength</label>
+                  <div class="col-sm-6">
+                    <input type="text" name="minlength" class="form-control"/>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset>
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Maxlength</label>
+                  <div class="col-sm-6">
+                    <input type="text" name="maxlength" class="form-control"/>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset class="b0">
+                <legend>Range</legend>
+              </fieldset>
+              <fieldset class="b0">
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Length range</label>
+                  <div class="col-sm-6">
+                    <input type="text" name="length" class="form-control"/>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset class="b0">
+                <legend>Comparison</legend>
+              </fieldset>
+              <fieldset class="b0">
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Equal to</label>
+                  <div class="col-sm-6">
+                    <div class="row">
+                      <div class="col-xs-6">
+                        <input id="id-source" type="password" name="match1" class="form-control"/>
+                      </div>
+                      <div class="col-xs-6">
+                        <input type="password" name="confirm_match" class="form-control"/>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+              <hr/>
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary">Run validation</button>
+              </div>
+              <!-- END panel-->
+            </form>
+          </div>
+        </div>
+        <!-- END row-->
+      </div>
+    </div>
+  </div>
+</template>

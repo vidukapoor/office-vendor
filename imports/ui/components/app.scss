@@ -1,0 +1,76 @@
+/*!
+ *
+ * Centric - Bootstrap Admin Template
+ *
+ * Version: 1.4.1
+ * Author: @themicon_co
+ * Website: http://themicon.co
+ * License: https://wrapbootstrap.com/help/licenses
+ *
+ */
+
+//
+// This file is included before any other
+//
+
+@charset "UTF-8";
+
+// Roboto font from Google
+@import url("//fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,700");
+
+@import "./common/variables.scss";
+
+@import "./bootstrap/reset.scss";
+
+@import "./core/layout-variants.scss";
+@import "./core/layout.scss";
+@import "./header/header.scss";
+@import "./header/header.menu-links.scss";
+@import "./sidebar/sidebar.scss";
+
+@import "./cards/cards.scss";
+
+@import "./charts/easypiechart.scss";
+@import "./charts/flot.scss";
+@import "./charts/sparkline.scss";
+
+@import "./common/animate.scss";
+@import "./common/buttons-extra.scss";
+@import "./common/dropdown-extra.scss";
+@import "./common/grid-extra.scss";
+@import "./common/mixins.scss";
+@import "./common/modal.scss";
+@import "./common/spinner.scss";
+@import "./common/themes.scss";
+@import "./common/typography.scss";
+@import "./common/ui.checkbox-radio.scss";
+@import "./common/ui.note-area.scss";
+@import "./common/ui.switch.scss";
+
+@import "./elements/grid-masonry.scss";
+@import "./elements/list.scss";
+@import "./elements/nestable.scss";
+
+@import "./forms/dropzone.scss";
+@import "./forms/editor.scss";
+@import "./forms/forms.advanced.scss";
+@import "./forms/material.scss";
+@import "./forms/validation.scss";
+@import "./forms/xeditable.scss";
+@import "./forms/wizard.scss";
+
+@import "./tables/bootgrid.scss";
+@import "./tables/datatable.scss";
+
+@import "./maps/google-map.scss";
+@import "./maps/vector-map.scss";
+
+@import "./pages/pages.scss";
+@import "./pages/timeline.scss";
+
+@import "./ripple/ripple.scss";
+@import "./floatbutton/floatbutton.scss";
+@import "./colors/colors.scss";
+@import "./settings/settings.scss";
+
+@import "./utils/utils.scss";

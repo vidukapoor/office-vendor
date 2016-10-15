@@ -1,0 +1,1 @@
+import './tables.classic.html';

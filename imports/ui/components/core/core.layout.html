@@ -1,0 +1,40 @@
+<template name="layout">
+
+    <div class="layout-container">
+
+        <!-- header -->
+        <header class="header-container">
+            {{> header }}
+        </header>
+
+        <!-- Sidebar -->
+        <aside class="sidebar-container">
+            {{> sidebar }}
+        </aside>
+        <div class="sidebar-layout-obfuscator"></div>
+
+        <!-- Main section -->
+        <main class="main-container">
+
+            <!-- Page content -->
+            <section>
+                {{> yield }}
+            </section>
+            <!-- Page footer -->
+            <footer>
+                <span>2016 - Centric app.</span>
+            </footer>
+        </main>
+
+    </div>
+
+    <!-- Search template -->
+    {{> headerSearch }}
+    <!-- End Search template -->
+    <!-- Settings template -->
+    {{> settings }}
+    <!-- End Settings template -->
+
+    {{> yield region="bodyChild" }}
+
+</template>
