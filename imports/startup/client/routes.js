@@ -18,6 +18,9 @@ Router.route('cards', function() {
     this.render('cards');
 });
 
+Router.route('subscription', function() {
+    this.render('subscription');
+});
 // Charts
 Router.map(function() {
     this.route('chart-flot', function() {
@@ -211,7 +214,6 @@ Router.map(function() {
 });
 
 // Router transitions
-
 Router.onAfterAction(function() {
 
     var ANIMATION_CLASS = 'fadeIn'; // see animate.css
@@ -230,4 +232,9 @@ Router.onAfterAction(function() {
         })
         // start animation
         .addClass(ANIMATION_CLASS);
+});
+
+// item list
+Router.route('Item_list', function() {
+    this.render('Item_list');
 });

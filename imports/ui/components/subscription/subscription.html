@@ -1,0 +1,132 @@
+<template name="subscription">
+    <div class=" panel-default">
+        <div class="panel-body">
+            <div class="row">
+                <form id="subscriberform" action="#">
+                <div class="col-sm-8 main">
+                    <div class="col-sm-12 ">
+                        <div class=" panel-default">
+                            <div class="panel-body">
+                                <div class="form-group row">
+                                    <label  class="col-sm-3"> Add Subscriber:</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control input-sm" id="Subscriber" name="Subscriber">
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <button type="submit" class="btn btn-sm btn-info pull-right" id="AddSubscriber" name="AddSubscriber">Add Subscriber</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </form>
+            </div>
+            <div class="row">
+                <div class="col-sm-8 main">
+                    <div class=" panel-default">
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                    {{#if subscriberAvailable}}
+                                    <thead>
+                                        <tr>
+                                            <th width="5%">S.No.</th>
+                                            <th width="50%">Subscription List</th>
+                                            <th width="45%">Action</th>
+                                        </tr>
+                                    </thead>
+                                    {{#each subscriberAvailable}}
+                                    <tbody>
+
+                                        <tr>
+                                            <td>{{serial @index}}</td>
+                                            <td>{{emailId}}</td>
+                                            <td>
+                                                <button type="button" class="btn btn-sm btn-info" data-toggle="modal" data-target="#editModel" id="edit" data-title="{{_id._str}}">Edit</button> &nbsp;
+                                                <button type="button" class="btn btn-sm btn-warning " id="remove" attr="{{_id._str}}">Remove</button>
+
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                    {{/each}}
+                                    {{/if}}
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="editModel" class="modal fade" role="dialog">
+           <div class="modal-dialog">
+               <!-- Modal content-->
+               <div class="modal-content">
+                   <div class="modal-header">
+                       <button type="button" class="close" data-dismiss="modal">&times;</button>
+                       <h4 class="modal-title">Send Email</h4>
+                   </div>
+                   <div class="modal-body">
+                       <div class="row">
+                           <div class="col-sm-12">
+                               <section class="panel panel-default">
+                                   <div class="panel-body">
+                                       <fieldset>
+                                           <div class="form-group pull-in clearfix">
+                                               <div class="col-sm-2"></div>
+                                               <div class="col-sm-3">
+                                                   <div class="form-group">
+                                                       <label for="txtChannelName">Original Mail-Id:</label>
+                                                   </div>
+                                               </div>
+                                               <div class="col-sm-5">
+                                                   <div class="form-group">
+                                                       <input type="text" value='{{modalEdit.emailId}}' class="form-control" id="originalMail" placeholder="Enter Subject">
+                                                   </div>
+                                               </div>
+                                               <div class="col-sm-2"></div>
+                                           </div>
+                                           <div class="form-group pull-in clearfix">
+                                               <div class="col-sm-2"></div>
+                                               <div class="col-sm-3">
+                                                   <div class="form-group">
+                                                       <label for="txtChannelName">New Mail-Id:</label>
+                                                   </div>
+                                               </div>
+                                               <div class="col-sm-5">
+                                                   <div class="form-group">
+                                                       <textarea class="form-control" row="2" id="newMail" placeholder="Enter message only"></textarea>
+                                                   </div>
+                                               </div>
+                                               <div class="col-sm-2"></div>
+                                           </div>
+                                       </fieldset>
+                                   </div>
+                               </section>
+                           </div>
+                       </div>
+                       <!-- </form> -->
+                   </div>
+                   <div class="form-group pull-in clearfix">
+                     <div class="col-sm-1"></div>
+                       <div class="col-sm-5">
+                           <div class="form-group">
+                               <button type="button" class="btn btn-danger pull-left closeSpd" data-dismiss="modal">Close</button>
+                           </div>
+                       </div>
+                       <div class="col-sm-5">
+                           <div class="form-group pull-right">
+                               <button type="button" class="btn btn-primary" id="updateMailId" data-title={{modalEdit._id._str}} data-dismiss="modal">Update</button>
+                           </div>
+                       </div>
+                       <div class="col-sm-1"></div>
+                   </div>
+                   <div class="modal-footer">
+                   </div>
+               </div>
+           </div>
+       </div>
+
+</template>

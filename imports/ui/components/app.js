@@ -67,6 +67,8 @@ import './user/signup.js';
 import './utils/screenfull.js';
 import './utils/svgreplace.js';
 
+import './subscription/subscription.js';
+
 // APP START
 // -----------------------------------
 

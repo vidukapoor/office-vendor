@@ -1,17 +1,23 @@
 <template name="sidebar">
     <div class="sidebar-header">
-        <div class="pull-right pt-lg text-muted hidden"><em class="ion-close-round"></em></div><a href="#" class="sidebar-header-logo"><img src="img/logo.png" data-svg-replace="img/logo.svg" alt="Logo"><span class="sidebar-header-logo-text">Centric</span></a>
+        <div class="pull-right pt-lg text-muted hidden"><em class="ion-close-round"></em></div>
+        <a href="#" class="sidebar-header-logo"><img src="img/logo.png" data-svg-replace="img/logo.svg" alt="Logo"><span class="sidebar-header-logo-text">Centric</span></a>
     </div>
     <div class="sidebar-content">
-        <div class="sidebar-toolbar text-center"><a href=""><img src="img/user/01.jpg" alt="Profile" class="img-circle thumb64"></a>
-            <div class="mt">Welcome, Willie Webb</div>
+        <div class="sidebar-toolbar text-center">
+            <a href=""><img src="img/user/01.jpg" alt="Profile" class="img-circle thumb64"></a>
+            <div class="mt">Welcome, app in process</div>
         </div>
         <nav class="sidebar-nav">
             <ul>
                 <li class="{{isActiveRoute regex='dashboard'}}">
                     <a href="{{pathFor 'dashboard'}}" class="ripple"><span class="pull-right nav-label"><span class="badge bg-success">2</span></span><span class="nav-icon"><img src="" data-svg-replace="img/icons/aperture.svg" alt="MenuItem" class="hidden"></span><span>Dashboard</span></a></li>
                 <li class="{{isActiveRoute regex='cards'}}">
-                    <a href="{{pathFor 'cards'}}" class="ripple"><span class="pull-right nav-label"></span><span class="nav-icon"><img src="" data-svg-replace="img/icons/radio-waves.svg" alt="MenuItem" class="hidden"></span><span>Cards</span></a></li>
+                    <a href="{{pathFor 'cards'}}" class="ripple"><span class="pull-right nav-label"></span><span class="nav-icon"><img src="" data-svg-replace="img/icons/radio-waves.svg" alt="MenuItem" class="hidden"></span><span>Cards</span></a>
+                </li>
+                <li class="{{isActiveRoute regex='subscription'}}">
+                    <a href="{{pathFor 'subscription'}}" class="ripple"><span class="pull-right nav-label"></span><span class="nav-icon"><img src="" data-svg-replace="img/icons/radio-waves.svg" alt="MenuItem" class="hidden"></span><span>Subscription List</span></a>
+                </li>
                 <li class="{{isActiveRoute regex='chart-flot|chart-radial|chart-rickshaw'}}">
                     <a href="#" class="ripple"><span class="pull-right nav-caret"><em class="ion-ios-arrow-right"></em></span><span class="pull-right nav-label"></span><span class="nav-icon"><img src="" data-svg-replace="img/icons/connection-bars.svg" alt="MenuItem" class="hidden"></span><span>Charts</span></a>
                     <ul class="sidebar-subnav">
