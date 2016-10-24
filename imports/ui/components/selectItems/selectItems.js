@@ -32,6 +32,14 @@ Template.selectItems.events({
             timeStamp: new Date()
         };
     },
+    'click #submitOrder'(event){
+      event.preventDefault();
+      console.log('orger submit');
+    },
+    'click #addOrder'(event){
+      event.preventDefault();
+      console.log($(event.currentTarget).attr('attr'));
+    }
 });
 
 
