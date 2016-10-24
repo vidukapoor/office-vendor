@@ -43,9 +43,13 @@ Template.selectItems.helpers({
         return moment().format('DD-MMM-YYYY');
     },
     returnList() {
+      if (Template.instance().itemList.get().item) {
         return Template.instance().itemList.get().item;
+      }
     },
     returnImage() {
+      if (Template.instance().itemList.get().image) {
         return Template.instance().itemList.get().image;
+      }
     }
 });
