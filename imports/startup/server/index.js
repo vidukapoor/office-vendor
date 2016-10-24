@@ -5,3 +5,6 @@ import '../../api/methods.js';
 import './fixtures.js';
 
 import './config.js';
+
+/////loading all publicationss/////////
+import './register-api.js';

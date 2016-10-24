@@ -1,3 +1,6 @@
+import {
+    Router
+} from 'meteor/iron:router';
 Router.configure({
     layoutTemplate: 'layout'
         // loadingTemplate: 'loading'
@@ -18,9 +21,7 @@ Router.route('cards', function() {
     this.render('cards');
 });
 
-Router.route('subscription', function() {
-    this.render('subscription');
-});
+
 // Charts
 Router.map(function() {
     this.route('chart-flot', function() {
@@ -234,7 +235,36 @@ Router.onAfterAction(function() {
         .addClass(ANIMATION_CLASS);
 });
 
-// item list
-Router.route('Item_list', function() {
-    this.render('Item_list');
+Router.route('subscription', {
+    layoutTemplate: 'layout',
+    onBeforeAction: function() {
+        if (Meteor.userId()) {
+            this.render('subscription');
+        } else {
+            Router.go('login');
+        }
+        this.next();
+    }
+});
+
+Router.route('addItems', function() {
+    this.render('addItems');
+});
+Router.route('selectItems', function() {
+    this.render('selectItems');
+});
+
+Router.route('logout', function() {
+    if (Meteor.userId()) {
+        var self = this;
+        Meteor.logout(function(err) {
+            if (err) {
+                // console.log('Error Logging out: ' + err);
+            }
+            SessionStore.clear();
+            Router.go('login');
+        });
+    } else {
+        Router.go('subscription');
+    }
 });

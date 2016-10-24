@@ -35,6 +35,7 @@ Template.subscription.events({
                 console.log(error);
             } else {
                 console.log(result);
+                $("#Subscriber").val('');
             }
         })
     },
@@ -46,6 +47,7 @@ Template.subscription.events({
             } else {
                 if (result) {
                     console.log(result);
+
                 }
             }
         })
@@ -66,6 +68,8 @@ Template.subscription.events({
             } else {
                 if (result) {
                     console.log(result);
+                    $('#newMail').val('');
+                    $('#updateMailId').val('');
                 }
             }
         })

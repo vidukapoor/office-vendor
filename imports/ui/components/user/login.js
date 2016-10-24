@@ -1,23 +1,19 @@
 import './login.html';
 
 Template.login.onCreated(function() {
-    // this.react = new ReactiveVar;
 });
 Template.login.onRendered(function() {})
 
 Template.login.events({
     'submit form#user-login' (e, instance) {
         e.preventDefault();
-        // var email = $('.email').val();
-        // var password = $('.password').val();
-        // console.log(email);
-        // console.log(password);
         Meteor.loginWithGoogle({
             requestPermissions: ['email']
         }, function(error) {
             if (error) {
                 console.log(error); //If there is any error, will get error here
             } else {
+                Router.go('subscription');
                 console.log(Meteor.user()); // If there is successful login, you will get login details here
             }
         });

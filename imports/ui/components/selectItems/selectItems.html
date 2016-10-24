@@ -1,0 +1,100 @@
+<template name="selectItems">
+    <div class="container-overlap bg-blue-500">
+        <div class="media m0 pv">
+            <div class="media-left">
+                <a href="#"><img src="{{returnImage}}" alt="User" class="media-object img-circle thumb64" /></a>
+            </div>
+            <div class="media-body media-middle">
+                <h4 class="media-heading">Date: {{today}}</h4>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Left column-->
+            <div class="col-md-7 col-lg-8">
+                <form editable-form="" name="user.profileForm" class="card">
+                    <h5 class="card-heading pb0">Items List</h5>
+                    <div class="card-body">
+                        <ul class="mda-list">
+                          {{#each returnList}}
+                            <li class="mda-list-item pl0 bb">
+                                <div class="mda-list-item-text">
+                                    <h3><a href="#">{{this.itemName}}</a></h3>
+                                    <p>{{this.itemAmount}}</p>
+                                </div>
+                                <div class="pull-right">
+                                    <div class="pt-lg">
+                                        <button type="button" class="btn btn-pill-right btn-success ripple">Success</button>
+                                    </div>
+                                </div>
+                            </li>
+                            {{/each}}
+                            <!-- <li class="mda-list-item pl0">
+                                <div class="mda-list-item-text">
+                                    <h3><a href="#">Small decisions count</a></h3>
+                                    <p>Proin metus justo, commodo in ultrices...</p><small class="text-muted">3 days ago</small>
+                                </div>
+                                <div class="pull-right">
+                                    <div class="pt-lg">
+                                        <button type="button" class="btn btn-pill-left btn-danger ripple">Danger</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="mda-list-item pl0">
+                                <div class="mda-list-item-text">
+                                    <h3><a href="#">Small decisions count</a></h3>
+                                    <p>Proin metus justo, commodo in ultrices...</p><small class="text-muted">3 days ago</small>
+                                </div>
+                                <div class="pull-right">
+                                    <div class="pt-lg">
+                                        <button type="button" class="btn btn-pill-left btn-danger ripple">Danger</button>
+                                    </div>
+                                </div>
+                            </li> -->
+                        </ul>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-5 col-lg-4">
+                <div class="card">
+                    <h5 class="card-heading">Summary</h5>
+                    <div class="mda-list">
+                        <div class="mda-list-item"><img src="img/user/01.jpg" alt="List user" class="mda-list-item-img" />
+                            <div class="mda-list-item-text mda-2-line">
+                                <h3><a href="#">Eric Graves</a></h3>
+                                <div class="text-muted text-ellipsis">Ut ac nisi id mauris</div>
+                            </div>
+                        </div>
+                        <div class="mda-list-item"><img src="img/user/02.jpg" alt="List user" class="mda-list-item-img" />
+                            <div class="mda-list-item-text mda-2-line">
+                                <h3><a href="#">Jessie Cox</a></h3>
+                                <div class="text-muted text-ellipsis">Sed lacus nisl luctus</div>
+                            </div>
+                        </div>
+                        <div class="mda-list-item"><img src="img/user/03.jpg" alt="List user" class="mda-list-item-img" />
+                            <div class="mda-list-item-text mda-2-line">
+                                <h3><a href="#">Marie Hall</a></h3>
+                                <div class="text-muted text-ellipsis">Donec congue sagittis mi</div>
+                            </div>
+                        </div>
+                        <div class="mda-list-item"><img src="img/user/04.jpg" alt="List user" class="mda-list-item-img" />
+                            <div class="mda-list-item-text mda-2-line">
+                                <h3><a href="#">Guy Carpenter</a></h3>
+                                <div class="text-muted text-ellipsis">Donec convallis arcu sit</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body pv0 text-left">
+                        <a href="#" class="btn btn-flat btn-default ripple">Total Amount: 567</a>
+                    </div>
+                    <div class="card-body pv0 text-right">
+                        <button type="button" class="btn btn-flat btn-success ripple">Success</button>
+                    </div>
+                    <div class="card-body">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
