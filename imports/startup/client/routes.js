@@ -7,9 +7,9 @@ Router.configure({
 });
 
 // Default route
-Router.route('/', function() {
-    Router.go('dashboard');
-});
+// Router.route('/', function() {
+//     Router.go('dashboard');
+// });
 
 // Dashboard
 Router.route('dashboard', function() {
@@ -235,6 +235,12 @@ Router.onAfterAction(function() {
         .addClass(ANIMATION_CLASS);
 });
 
+
+// my default  route
+Router.route('/', function() {
+    Router.go('login');
+});
+
 Router.route('subscription', {
     layoutTemplate: 'layout',
     onBeforeAction: function() {
@@ -250,8 +256,20 @@ Router.route('subscription', {
 Router.route('addItems', function() {
     this.render('addItems');
 });
-Router.route('selectItems', function() {
-    this.render('selectItems');
+Router.route('selectItems', {
+    layoutTemplate: 'layout',
+    onBeforeAction: function() {
+        if (Meteor.userId()) {
+            this.render('selectItems');
+        } else {
+            Router.go('login');
+        }
+        this.next();
+    }
+});
+
+Router.route('generate-invoice', function() {
+    this.render('generate_invoice');
 });
 
 Router.route('logout', function() {
@@ -265,6 +283,6 @@ Router.route('logout', function() {
             Router.go('login');
         });
     } else {
-        Router.go('subscription');
+        Router.go('login');
     }
 });

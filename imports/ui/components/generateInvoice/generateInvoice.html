@@ -1,0 +1,70 @@
+<template name="generate_invoice">
+    <div class="container container-fluid">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-xs-6">
+                <h3 class="m0">Select Date</h3><span class="text-muted"><input type="text" id='datePicker' placeholder='Select Date' /></span>
+              </div>
+              <div class="col-xs-6 text-right">
+                <h5 class="mv">Invoice no. #2456544</h5>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-md-2">
+                <h4 class="m0">Deliver to:</h4>
+              </div>
+              <div class="col-md-10">
+                <address><strong>CybuzzSc, Inc.</strong><br>  E-182<br>  Noida, Sector-63<br><abbr title="Phone">P:</abbr> (123) 456-7890</address>
+                <address class="mb0"><strong>Full Name</strong><br><a href="mailto:#">vishwadeepkapoor@cybuzzsc.com</a></address>
+              </div>
+            </div>
+            <div class="mv-lg"></div>
+
+            {{#if ShowTable}}
+            <div class="table-responsive mv-lg">
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Item #</th>
+                    <th>Employe</th>
+                    <th>Items</th>
+                    <th class="text-right">Total</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {{#each returnList.order}}
+                  <tr>
+                    <td>{{serial @index}}</td>
+                    <td>{{this.userName}}</td>
+                    <td>{{getItems this.orderList}}</td>
+                    <td class="text-right">{{this.total}}</td>
+                  </tr>
+                  {{/each}}
+                </tbody>
+              </table>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+              </div>
+              <hr class="visible-xs visible-sm">
+              <div class="col-md-1 col-lg-3"></div>
+              <div class="col-md-5 col-lg-3 text-right">
+                <p class="clearfix"><strong class="pull-left">Sub Total:</strong><span class="pull-right">{{returnList.subTotal}}</span></p>
+                <hr>
+                <h3 class="m0 text-right">Rs. {{returnList.subTotal}}</h3>
+              </div>
+            </div>
+            <hr>
+            <div class="clearfix">
+              <!-- <button type="button" class="btn btn-info pull-left mr">Edit</button> -->
+              <!-- <button type="button" class="btn btn-default pull-left">Print</button> -->
+              <button type="button" class="btn btn-success pull-right">Print Invoice</button>
+            </div>
+            {{/if}}
+
+          </div>
+        </div>
+    </div>
+</template>

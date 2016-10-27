@@ -13,7 +13,7 @@ Template.login.events({
             if (error) {
                 console.log(error); //If there is any error, will get error here
             } else {
-                Router.go('subscription');
+                Router.go('selectItems');
                 console.log(Meteor.user()); // If there is successful login, you will get login details here
             }
         });

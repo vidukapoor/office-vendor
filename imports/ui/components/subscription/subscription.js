@@ -26,18 +26,28 @@ Template.subscription.rendered = function() {
 Template.subscription.events({
     'click #AddSubscriber': function(event) {
         event.preventDefault();
-        var json = {
-            'emailId': $("#Subscriber").val(),
-            timeStamp: new Date()
-        };
-        Meteor.call('saveSubs', json, function(error, result) {
-            if (error) {
-                console.log(error);
+        if ($("#Subscriber").val()) {
+            var mailId = $("#Subscriber").val();
+            var checkMail = mailId.split('@');
+            if (checkMail.length == 2) {
+                var json = {
+                    'emailId': $("#Subscriber").val(),
+                    timeStamp: new Date()
+                };
+                Meteor.call('saveSubs', json, function(error, result) {
+                    if (error) {
+                        console.log(error);
+                    } else {
+                        console.log(result);
+                        $("#Subscriber").val('');
+                    }
+                })
             } else {
-                console.log(result);
-                $("#Subscriber").val('');
+                swal('Please enter valid Mail-Id');
             }
-        })
+        } else {
+            swal('Please enter Mail-Id');
+        }
     },
     'click #remove' (e, instance) {
         console.log($(e.currentTarget).attr('attr'));
@@ -46,8 +56,8 @@ Template.subscription.events({
                 console.log(error);
             } else {
                 if (result) {
+                    swal('SUbscriber Removed');
                     console.log(result);
-
                 }
             }
         })
@@ -61,20 +71,30 @@ Template.subscription.events({
     },
     'click #updateMailId' () {
         var newMail = $('#newMail').val();
-        var userId = $('#updateMailId').attr('data-title')
-        Meteor.call('updateSubscriber', newMail, userId, function(error, result) {
-            if (error) {
-                console.log(error);
+        var userId = $('#updateMailId').attr('data-title');
+        if (userId) {
+            var splitUser = userId.split('@');
+            if (splitUser.length == 2) {
+                Meteor.call('updateSubscriber', newMail, userId, function(error, result) {
+                    if (error) {
+                        console.log(error);
+                    } else {
+                        if (result) {
+                            console.log(result);
+                            $('#newMail').val('');
+                            $('#updateMailId').val('');
+                        }
+                    }
+                })
             } else {
-                if (result) {
-                    console.log(result);
-                    $('#newMail').val('');
-                    $('#updateMailId').val('');
-                }
+                swal('Please enter valid Mail-Id');
+                $('#newMail').val('');
+                $('#updateMailId').val('');
             }
-        })
+        } else {
+            swal('Please enter Mail-Id');
+        }
     },
-
 });
 
 

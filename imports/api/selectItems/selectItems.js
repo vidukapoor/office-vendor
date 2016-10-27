@@ -1,5 +1,5 @@
 import { Mongo } from 'meteor/mongo';
 
-export const itemsDetails = new Mongo.Collection("items_details", {
+export const orderDetails = new Mongo.Collection("order_details", {
     idGeneration: 'MONGO'
 });
